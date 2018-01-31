@@ -1,31 +1,117 @@
 import 'package:flutter/material.dart';
 
-class MyAppBar extends StatelessWidget {
-  MyAppBar({this.title});
+void main() {
+  runApp(
+    new MaterialApp(
+      title: 'Menu Page',
+      home: new MenuPage(),
+      routes: <String, WidgetBuilder>{
+        //home page is automatically defiend as:
+        //"/": (BuildContext context) => new MenuPage(),
+        "/CurrentStatePage": (BuildContext context) => new CurrentStatePage(),
+        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
+        "/ActivityMonitor": (BuildContext context) => new ActivityMonitor(),
+        "/RiskHistory": (BuildContext context) => new RiskHistory(),
+        "/LabWork": (BuildContext context) => new LabWork(),
+        "/PSSATForm": (BuildContext context) => new PSSATForm()
+      }
+    )
+  );
+}
 
-  // Fields in a Widget subclass are always marked "final".
-
-  final Widget title;
-
+class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      height: 56.0, // in logical pixels
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      decoration: new BoxDecoration(color: Colors.pink[100]),
-      // Row is a horizontal, linear layout.
-      child: new Row(
-        // <Widget> is the type of items in the list.
-        children: <Widget>[
+    // Scaffold is a layout for the major Material Design widgets.
+    return new Scaffold(
+      appBar: new AppBar(
+        leading: new IconButton(
+          color: Colors.lightBlue,
+          icon: new Icon(Icons.arrow_drop_down_circle),
+          tooltip: 'Navigation menu',
+          onPressed: null,
+        ),
+        title: new Text('Options', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
           new IconButton(
-            icon: new Icon(Icons.menu),
-            tooltip: 'Navigation menu',
-            onPressed: null, // null disables the button
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
           ),
-          // Expanded expands its child to fill the available space.
-          new Expanded(
-            child: title,
+        ],
+      ),
+
+      // body is the majority of the screen.
+      body: new Container(
+        child: new Center(
+          child: new Column(
+//            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Current State", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
+                ),
+              ),
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");}
+
+                ),
+              ),
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
+                ),
+              ),
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Risk History", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
+                ),
+              ),
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Lab Work", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
+                ),
+              ),
+              new Container(
+//                padding: new EdgeInsets.all(10.0),
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black)),
+                  onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
+                ),
+              )
+
+            ],
           ),
+        )
+      )
+    );
+  }
+}
+
+class CurrentStatePage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Current Status', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
           new IconButton(
             icon: new Icon(Icons.search),
             tooltip: 'Search',
@@ -37,24 +123,17 @@ class MyAppBar extends StatelessWidget {
   }
 }
 
-class MyScaffold extends StatelessWidget {
+class RiskMonitor extends StatelessWidget{
   @override
-  Widget build(BuildContext context) {
-    // Material is a conceptual piece of paper on which the UI appears.
-    return new Material(
-      // Column is a vertical, linear layout.
-      child: new Column(
-        children: <Widget>[
-          new MyAppBar(
-            title: new Text(
-              'Example title',
-              style: Theme.of(context).primaryTextTheme.title,
-            ),
-          ),
-          new Expanded(
-            child: new Center(
-              child: new Text('Hello, world!'),
-            ),
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Risk Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
           ),
         ],
       ),
@@ -62,9 +141,74 @@ class MyScaffold extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(new MaterialApp(
-    title: 'My app', // used by the OS task switcher
-    home: new MyScaffold(),
-  ));
+class ActivityMonitor extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Activity Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class RiskHistory extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Risk History", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class LabWork extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Lab Work", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PSSATForm extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("PSSAT Form", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
 }
