@@ -45,54 +45,59 @@ class MenuPage extends StatelessWidget {
       body: new Container(
         child: new Center(
           child: new Column(
-//            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               new Container(
-//                padding: new EdgeInsets.all(10.0),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
                 child: new RaisedButton(
                   color: Colors.blue[200],
-                  child: new Text("Current State", style: new TextStyle(color: Colors.black)),
+                  child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
+                )
+              ),
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  color: Colors.blue[200],
+                  child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+                  onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");},
                 ),
               ),
               new Container(
-//                padding: new EdgeInsets.all(10.0),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
                 child: new RaisedButton(
                   color: Colors.blue[200],
-                  child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black)),
-                  onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");}
-
-                ),
-              ),
-              new Container(
-//                padding: new EdgeInsets.all(10.0),
-                child: new RaisedButton(
-                  color: Colors.blue[200],
-                  child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black)),
+                  child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
                 ),
               ),
               new Container(
-//                padding: new EdgeInsets.all(10.0),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
                 child: new RaisedButton(
                   color: Colors.blue[200],
-                  child: new Text("Risk History", style: new TextStyle(color: Colors.black)),
+                  child: new Text("Risk History", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
                 ),
               ),
               new Container(
-//                padding: new EdgeInsets.all(10.0),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
                 child: new RaisedButton(
                   color: Colors.blue[200],
-                  child: new Text("Lab Work", style: new TextStyle(color: Colors.black)),
+                  child: new Text("Lab Work", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
                 ),
               ),
               new Container(
-//                padding: new EdgeInsets.all(10.0),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
                 child: new RaisedButton(
                   color: Colors.blue[200],
-                  child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black)),
+                  child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
                 ),
               )
