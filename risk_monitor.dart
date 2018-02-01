@@ -108,9 +108,9 @@ class RiskMonitor extends StatelessWidget {
           height: 100.0,
           alignment: Alignment.center,
             child: new RaisedButton(
-//                highlightColor: Colors.blueGrey,
+              // COLOR NOT SHOWING
+                highlightColor: Colors.blueGrey,
                 onPressed: null,
-                color: Colors.red,
                 child: new Text(
                     'Care Plan',
                     style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.5)
