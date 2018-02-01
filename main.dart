@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'risk_monitor.dart';
+
 void main() {
   runApp(
     new MaterialApp(
@@ -25,8 +27,8 @@ class MenuPage extends StatelessWidget {
     // Scaffold is a layout for the major Material Design widgets.
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.grey,
         leading: new IconButton(
-          color: Colors.lightBlue,
           icon: new Icon(Icons.arrow_drop_down_circle),
           tooltip: 'Navigation menu',
           onPressed: null,
@@ -51,7 +53,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
                 )
@@ -60,7 +62,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");},
                 ),
@@ -69,7 +71,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
                 ),
@@ -78,7 +80,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("Risk History", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
                 ),
@@ -87,7 +89,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("Lab Work", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
                 ),
@@ -96,7 +98,7 @@ class MenuPage extends StatelessWidget {
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  color: Colors.blue[200],
+                  color: Colors.grey[200],
                   child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                   onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
                 ),
@@ -128,23 +130,23 @@ class CurrentStatePage extends StatelessWidget{
   }
 }
 
-class RiskMonitor extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Risk Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: null,
-          ),
-        ],
-      ),
-    );
-  }
-}
+//class RiskMonitor extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context){
+//    return new Scaffold(
+//      appBar: new AppBar(
+//        title: new Text("Risk Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+//        actions: <Widget>[
+//          new IconButton(
+//            icon: new Icon(Icons.search),
+//            tooltip: 'Search',
+//            onPressed: null,
+//          ),
+//        ],
+//      ),
+//    );
+//  }
+//}
 
 class ActivityMonitor extends StatelessWidget{
   @override

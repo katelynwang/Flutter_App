@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Risk Monitor Page',
-  home: new RiskMonitor(),
-));
+//void main() => runApp(new MaterialApp(
+//  title: 'Risk Monitor Page',
+//  home: new RiskMonitor(),
+//));
 
 class RiskMonitor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        leading: new IconButton(
-          onPressed: null,
-          icon: new Icon(Icons.backspace),
-        ),
+//        leading: new IconButton(
+//          onPressed: null,
+//          icon: new Icon(Icons.backspace),
+//        ),
         title: new Text(
           'Risk Monitor',
           style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.6
@@ -108,8 +108,9 @@ class RiskMonitor extends StatelessWidget {
           height: 100.0,
           alignment: Alignment.center,
             child: new RaisedButton(
-                highlightColor: Colors.blueGrey,
-                onPressed: null, 
+//                highlightColor: Colors.blueGrey,
+                onPressed: null,
+                color: Colors.red,
                 child: new Text(
                     'Care Plan',
                     style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.5)
