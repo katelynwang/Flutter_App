@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'risk_monitor.dart';
+import 'ActivityMonitor.dart';
 
 void main() {
   runApp(
@@ -29,7 +30,7 @@ class MenuPage extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.grey,
         leading: new IconButton(
-          icon: new Icon(Icons.arrow_drop_down_circle),
+          icon: new Icon(Icons.menu),
           tooltip: 'Navigation menu',
           onPressed: null,
         ),
@@ -147,23 +148,23 @@ class CurrentStatePage extends StatelessWidget{
 //  }
 //}
 
-class ActivityMonitor extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Activity Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: null,
-          ),
-        ],
-      ),
-    );
-  }
-}
+//class ActivityMonitor extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context){
+//    return new Scaffold(
+//      appBar: new AppBar(
+//        title: new Text("Activity Monitor", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+//        actions: <Widget>[
+//          new IconButton(
+//            icon: new Icon(Icons.search),
+//            tooltip: 'Search',
+//            onPressed: null,
+//          ),
+//        ],
+//      ),
+//    );
+//  }
+//}
 
 class RiskHistory extends StatelessWidget{
   @override

@@ -10,10 +10,6 @@ class RiskMonitor extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-//        leading: new IconButton(
-//          onPressed: null,
-//          icon: new Icon(Icons.backspace),
-//        ),
         title: new Text(
           'Risk Monitor',
           style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.6
