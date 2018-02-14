@@ -8,7 +8,10 @@ class MenuDrawer extends StatelessWidget {
         //DrawerHeader for future use (dashboard, login page etc.)
         new DrawerHeader(
           child: new Container(
-            child: new FlatButton(onPressed: null, child: new Text('Log In', style: new TextStyle(color: Colors.black))),
+            child: new FlatButton(
+                onPressed: null, //TODO: add links for all onTaps
+                child: new Text('Log In', style: new TextStyle(color: Colors.black))
+            ),
             margin: new EdgeInsets.only(left: 0.0, right: 170.0, top: 10.0, bottom: 80.0)
           ),
         ),

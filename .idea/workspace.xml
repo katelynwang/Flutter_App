@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a24fd619-85a6-4692-8fe3-6827d04bc373" name="Default" comment="Test table">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Demo/pesto_demo.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart" />
+    <list default="true" id="a24fd619-85a6-4692-8fe3-6827d04bc373" name="Default" comment="entered table in all history page,">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LabWorkPart/EnterPatientReports.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/EnterPatientReports.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LabWorkPart/OrderAdditionalTest.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/OrderAdditionalTest.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewPatientReports.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/ViewPatientReports.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecMedication.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecMedication.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecTests.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecTests.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/RiskMonitor.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/RiskMonitor.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Demo/pesto_demo.dart" afterPath="$PROJECT_DIR$/lib/Demo/pesto_demo.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" afterPath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,11 +22,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RiskHistory_Hypothermia.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypothermia.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+            <state relative-caret-position="225">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -40,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RiskHistory_All.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuDrawer.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Material/MenuDrawer.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RiskHistory_All.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+            <state relative-caret-position="435">
+              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -52,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pesto_demo.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pesto_demo.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Demo/pesto_demo.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -121,14 +137,15 @@
         <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypothermia.dart" />
         <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypoglycemia.dart" />
         <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/Demo/pesto_demo.dart" />
         <option value="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="88" />
+    <option name="x" value="-257" />
     <option name="y" value="23" />
     <option name="width" value="1284" />
     <option name="height" value="946" />
@@ -446,7 +463,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518650748619" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518651224438" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -494,7 +511,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518650748619" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518651224438" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -734,7 +751,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518645060831</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Test table">
+      <created>1518650754891</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518650754891</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -747,10 +771,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="23" width="1284" height="946" extended-state="0" />
+    <frame x="-257" y="23" width="1284" height="946" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26229507" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1161,38 +1185,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Material/MenuDrawer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypothermia.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        <state relative-caret-position="225">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Material/MenuDrawer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+        <state relative-caret-position="513">
+          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1202,8 +1216,18 @@
     <entry file="file://$PROJECT_DIR$/lib/Demo/pesto_demo.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,7 +18,7 @@ class PestoDemo extends StatelessWidget {
 const String _kSmallLogoImage = 'pesto/logo_small.png';
 const String _kGalleryAssetsPackage = 'flutter_gallery_assets';
 const double _kAppBarHeight = 128.0;
-const double _kFabHalfSize = 28.0; // TODO(mpcomplete): needs to adapt to screen size
+const double _kFabHalfSize = 28.0;
 const double _kRecipePageMaxWidth = 500.0;
 
 final Set<Recipe> _favoriteRecipes = new Set<Recipe>();

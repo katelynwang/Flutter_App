@@ -17,6 +17,8 @@ class RiskHistory_All extends StatelessWidget {
           'All Risk Hisotry',
           style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
         ),
+
+        //TODO: show current patient info on/under AppBar
       ),
 
       body: new Column(
@@ -25,27 +27,54 @@ class RiskHistory_All extends StatelessWidget {
             alignment: Alignment.center,
             child: new Column(
               children: <Widget>[
-                new Table(
+                new Table(  //TODO: horizontal view
                   children: <TableRow>[
                     new TableRow(
                       children: <Widget>[
-                        new TableCell(child: new Text('1aaaaa')),
-                        new TableCell(child: new Text('1bbbbb')),
-                        new TableCell(child: new Text('1ccccc')),
+                        new TableCell(child: new Text('Time')),
+                        new TableCell(child: new Text('Hypoglycemia (Blood Glucose)')),
+                        new TableCell(child: new Text('Pneumothorax')),
+                        new TableCell(child: new Text('Hypothermia'))
                       ]
                     ),
                     new TableRow(
                         children: <Widget>[
-                          new TableCell(child: new Text('2aaaaa')),
-                          new TableCell(child: new Text('2bbbbb')),
-                          new TableCell(child: new Text('2ccccc')),
+                          new TableCell(child: new Text('09:00')),
+                          new TableCell(child: new Text('Normal - 60')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk'))
                         ]
                     ),
                     new TableRow(
                         children: <Widget>[
-                          new TableCell(child: new Text('3aaaaa')),
-                          new TableCell(child: new Text('3bbbbb')),
-                          new TableCell(child: new Text('3ccccc')),
+                          new TableCell(child: new Text('06:00')),
+                          new TableCell(child: new Text('Under observation - 43')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk'))
+                        ]
+                    ),
+                    new TableRow(
+                        children: <Widget>[
+                          new TableCell(child: new Text('04:00')),
+                          new TableCell(child: new Text('Actual Risk - 24')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk'))
+                        ]
+                    ),
+                    new TableRow(
+                        children: <Widget>[
+                          new TableCell(child: new Text('03:00')),
+                          new TableCell(child: new Text('Actual Risk - 22.50')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk'))
+                        ]
+                    ),
+                    new TableRow(
+                        children: <Widget>[
+                          new TableCell(child: new Text('01:00')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk')),
+                          new TableCell(child: new Text('Potential Risk'))
                         ]
                     )
                   ],

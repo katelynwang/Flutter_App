@@ -39,7 +39,7 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Scaffold is a layout for the major Material Design widgets.
-    return new Scaffold(
+    return new Scaffold(  //TODO: theme
       drawer: new Drawer(
         child: new MenuDrawer(),
       ),
