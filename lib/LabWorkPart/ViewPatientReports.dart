@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Material/MenuDrawer.dart';
+
 class ViewPatientReports extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
