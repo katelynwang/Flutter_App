@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'RiskMonitor.dart';
-import 'ActivityMonitor.dart';
-import 'RiskHistory.dart';
-import 'RiskHistory_All.dart';
-import 'RiskHistory_Hypoglycemia.dart';
-import 'RiskHistory_Pneumothorax.dart';
-import 'RiskHistory_Hypothermia.dart';
+import 'CurrentStatePart/CurrentState.dart';
+import 'RiskMonitorPart/RiskMonitor.dart';
+import 'ActivityMonitorPart/ActivityMonitor.dart';
+import 'RiskHistoryPart/RiskHistory.dart';
+import 'RiskHistoryPart/RiskHistory_All.dart';
+import 'RiskHistoryPart/RiskHistory_Hypoglycemia.dart';
+import 'RiskHistoryPart/RiskHistory_Pneumothorax.dart';
+import 'RiskHistoryPart/RiskHistory_Hypothermia.dart';
+import 'LabWorkPart/LabWork.dart';
+import 'PssatForm/PssatForm.dart';
 
 void main() {
   runApp(
@@ -16,16 +19,16 @@ void main() {
           routes: <String, WidgetBuilder>{
             //home page is automatically defiend as:
             //"/": (BuildContext context) => new MenuPage(),
-            "/CurrentState": (BuildContext context) => new CurrentStatePage(),
+            "/CurrentState": (BuildContext context) => new CurrentState(),
             "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
-            "/ActivityMonitor": (BuildContext context) => new ActivityMonitor(),
+            "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
             "/RiskHistory": (BuildContext context) => new RiskHistory(),
             "/LabWork": (BuildContext context) => new LabWork(),
             "/PSSATForm": (BuildContext context) => new PSSATForm(),
             "/RiskHistory_All": (BuildContext context) => new RiskHistory_All(),
             "/RiskHistory_Hypoglycemia": (BuildContext context) => new RiskHistory_Hypoglycemia(),
             "/RiskHistory_Pneumothorax": (BuildContext context) => new RiskHistory_Pneumothorax(),
-            "/RiskHistory_Hypothermia": (BuildContext context) => new RiskHistory_Hypothermia(),
+            "/RiskHistory_Hypothermia": (BuildContext context) => new RiskHistory_Hypothermia()
           }
       )
   );
@@ -41,7 +44,7 @@ class MenuPage extends StatelessWidget {
             children: <Widget>[
               //DrawerHeader for future use (dashboard, login page etc.)
               new DrawerHeader(
-                child: new Text('Menu Options'),
+                child: new Text('Log In'),
                 padding: new EdgeInsets.only(left: 10.0, right: 50.0, top: 3.0, bottom: 0.0),
               ),
 
@@ -187,7 +190,7 @@ class MenuPage extends StatelessWidget {
                       child: new RaisedButton(
 //                  child: new Icon(Icons.note),
                           child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                          onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
+                          onPressed: (){Navigator.of(context).pushNamed("/CurrentState");}
                       )
                   ),
                   new Container(
@@ -239,24 +242,6 @@ class MenuPage extends StatelessWidget {
   }
 }
 
-class CurrentStatePage extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Current Status', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: null,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class LabWork extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -278,5 +263,3 @@ class PSSATForm extends StatelessWidget{
     );
   }
 }
-
-
