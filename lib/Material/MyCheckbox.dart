@@ -49,7 +49,7 @@ class MyCheckboxListState extends State<MyCheckboxList> {
   Widget build(BuildContext context){
     return new Container(
       padding: new EdgeInsets.symmetric(vertical: 20.0),
-      height: 350.0,
+      height: 300.0,
       child: new Column(
         children: <Widget>[
           new Expanded(

@@ -49,7 +49,7 @@ class MenuPage extends StatelessWidget {
 //          tooltip: 'Navigation menu',
 //          onPressed: null
 //        ),
-        title: new Text('Options', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        title: new Text('Options', textAlign: TextAlign.left, style: new TextStyle(color: Colors.white)),
       ),
 
       // body is the majority of the screen.
@@ -67,6 +67,7 @@ class MenuPage extends StatelessWidget {
                       onPressed: (){Navigator.of(context).pushNamed("/CurrentState");}
                   )
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
@@ -75,6 +76,7 @@ class MenuPage extends StatelessWidget {
                   onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");},
                 ),
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
@@ -83,6 +85,7 @@ class MenuPage extends StatelessWidget {
                     onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
                 ),
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
@@ -92,6 +95,7 @@ class MenuPage extends StatelessWidget {
 //                  onPressed: riskHistoryMenu
                 ),
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
@@ -100,6 +104,7 @@ class MenuPage extends StatelessWidget {
                     onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
                 ),
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
@@ -108,6 +113,7 @@ class MenuPage extends StatelessWidget {
                     onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
                 ),
               )
+
             ],
           ),
         )
