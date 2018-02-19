@@ -1,140 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
+import '../Material/MyCheckbox.dart';
 
+void main() => runApp(new MaterialApp(
+  title: 'Customize Care Plan',
+  home: new OrderAdditionalTests(),
+));
 class OrderAdditionalTests extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       endDrawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-            //DrawerHeader for future use (dashboard, login page etc.)
-            new DrawerHeader(
-              child: new Text('Log In'),
-              padding: new EdgeInsets.only(left: 10.0, right: 50.0, top: 3.0, bottom: 0.0),
-            ),
-
-            //current state
-            const ListTile(
-              title: const Text('Current State'),
-//                onTap: ,
-            ),
-
-            //risk monitor
-            new ExpansionTile(
-                title: const Text('Risk Monitor'),
-                backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-                children: const <Widget>[
-                  const ListTile(
-                    title: const Text('Hypotension'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Hypothermia'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Pneumothorax'),
-//                      onTap: ,
-                  )
-                ]
-            ),
-
-            //activity monitor
-            const ListTile(
-              title: const Text('Activity Monitor'),
-//                onTap: ,
-            ),
-
-            //risk history
-            new ExpansionTile(
-              title: const Text('Risk Hisotry'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('All'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypoglycemia'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Pneumothorax'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypothermia'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //lab work
-            new ExpansionTile(
-              title: new Text('Lab Work'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('View Recommended Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Order Additional Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('View Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Recommended Medication'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //PSSAT form
-            const ListTile(title: const Text('PSSAT Form')),
-
-            //STABLE
-            new ExpansionTile(
-              title: new Text('S.T.A.B.L.E'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('Sugar'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Temperature'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Airway'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Blood Pressure'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Lab Work'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Emotional Support'),
-//                      onTap: ,
-                )
-              ],
-            )
-          ],
-        ),
+        child: new MenuDrawer(),
       ),
       appBar: new AppBar(
 //        leading: new IconButton(
@@ -149,12 +27,54 @@ class OrderAdditionalTests extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new Container(
-              alignment: Alignment.center,
-              child: new Column(
-                children: <Widget>[
-                  new Text("To be continued")
-                ],
-              )
+            alignment: Alignment.center,
+            child: new Column(
+              children: <Widget>[
+                new Container(
+                  child: new MyCheckboxList(
+                    myCheckbox: [
+                      new MyCheckbox(false, 'Daily repeated CBC with differential'),  //TODO: add icon to explain terms
+                      new MyCheckbox(false, 'CRP (C-Reactive Protein)'),
+                      new MyCheckbox(false, 'Blood gas'),
+                      new MyCheckbox(false, 'Electrolytes'),
+                      new MyCheckbox(false, 'Clotting studies'),
+                    ],
+                  )
+                ),
+
+                new RaisedButton(   //TODO: check if any box is checked
+                  child: new Text('Submit'),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      child: new AlertDialog(
+                        content: new Text('Are you sure to order this test?'),
+                        actions: <Widget>[
+                          new RaisedButton(
+                            child: new Text('Cancel'),
+                            onPressed: () {Navigator.of(context).pop();}
+                          ),
+                          new RaisedButton(
+                            child: new Text('Submit'),
+                            onPressed: (){
+                              showDialog(
+                                context: context,
+                                child: new AlertDialog(
+                                  content: new Text('New test added successfully!'),
+                                  actions: <Widget>[
+                                    //TODO: used 2 pop functions
+                                    new RaisedButton(child: new Text("OK"), onPressed: (){Navigator.of(context).pop();Navigator.of(context).pop();})
+                                  ],
+                                )
+                              );
+                            })
+                        ],
+                      )
+                    );
+                  }
+                )
+              ],
+            )
           )
         ],
       ),

@@ -38,47 +38,48 @@ class RiskHistory_All extends StatelessWidget {
                       ]
                     ),
                     new TableRow(
-                        children: <Widget>[
-                          new TableCell(child: new Text('09:00')),
-                          new TableCell(child: new Text('Normal - 60')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk'))
-                        ]
+                      children: <Widget>[
+                        new TableCell(child: new Text('09:00')),
+                        new TableCell(child: new Text('Normal - 60')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
                     ),
                     new TableRow(
-                        children: <Widget>[
-                          new TableCell(child: new Text('06:00')),
-                          new TableCell(child: new Text('Under observation - 43')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk'))
-                        ]
+                      children: <Widget>[
+                        new TableCell(child: new Text('06:00')),
+                        new TableCell(child: new Text('Under observation - 43')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
                     ),
                     new TableRow(
-                        children: <Widget>[
-                          new TableCell(child: new Text('04:00')),
-                          new TableCell(child: new Text('Actual Risk - 24')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk'))
-                        ]
+                      children: <Widget>[
+                        new TableCell(child: new Text('04:00')),
+                        new TableCell(child: new Text('Actual Risk - 24')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
                     ),
                     new TableRow(
-                        children: <Widget>[
-                          new TableCell(child: new Text('03:00')),
-                          new TableCell(child: new Text('Actual Risk - 22.50')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk'))
-                        ]
+                      children: <Widget>[
+                        new TableCell(child: new Text('03:00')),
+                        new TableCell(child: new Text('Actual Risk - 22.50')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
                     ),
                     new TableRow(
-                        children: <Widget>[
-                          new TableCell(child: new Text('01:00')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk')),
-                          new TableCell(child: new Text('Potential Risk'))
-                        ]
+                      children: <Widget>[
+                        new TableCell(child: new Text('01:00')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
                     )
                   ],
-                )
+
+                ),
               ],
             )
           )
@@ -87,3 +88,8 @@ class RiskHistory_All extends StatelessWidget {
     );
   }
 }
+
+void main() => runApp(new MaterialApp(
+  title: 'All Risk History',
+  home: new RiskHistory_All(),
+));
