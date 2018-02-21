@@ -20,7 +20,7 @@ class MenuDrawer extends StatelessWidget {
 
               new Container(
                   child: new FlatButton(
-                      onPressed: null, //TODO: user can search patient after logging in, if not can only see faqs etc.
+                      onPressed: null, //TODO: user can search patient after logging in, if not can only see FAQs etc.
                       child: new Text(' Search Patient', style: new TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500), textAlign: TextAlign.left),
                   ),
                   alignment: Alignment.centerLeft,
