@@ -7,7 +7,7 @@ packages:
       name: analyzer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.31.0+1"
+    version: "0.31.1"
   args:
     dependency: transitive
     description:
@@ -21,7 +21,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.0.4"
   barback:
     dependency: transitive
     description:
@@ -101,7 +101,7 @@ packages:
       name: front_end
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.0-alpha.8"
+    version: "0.1.0-alpha.9"
   glob:
     dependency: transitive
     description:
@@ -164,7 +164,7 @@ packages:
       name: kernel
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0-alpha.5"
+    version: "0.3.0-alpha.9"
   logging:
     dependency: transitive
     description:
@@ -185,7 +185,7 @@ packages:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.1"
+    version: "1.1.2"
   mime:
     dependency: transitive
     description:
@@ -199,7 +199,7 @@ packages:
       name: mockito
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.2"
+    version: "2.2.3"
   multi_server_socket:
     dependency: transitive
     description:
@@ -351,14 +351,14 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.30+2"
+    version: "0.12.30+3"
   typed_data:
     dependency: transitive
     description:
       name: typed_data
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.4"
+    version: "1.1.5"
   utf:
     dependency: transitive
     description:
@@ -386,7 +386,7 @@ packages:
       name: web_socket_channel
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.6"
+    version: "1.0.7"
   yaml:
     dependency: transitive
     description:
@@ -395,4 +395,4 @@ packages:
     source: hosted
     version: "2.1.13"
 sdks:
-  dart: ">=2.0.0-dev.20.0 <=2.0.0-dev.22.0"
+  dart: ">=2.0.0-dev.23.0 <=2.0.0-edge.0d5cf900b021bf5c9fa593ffa12b15bcd1cc5fe0"
