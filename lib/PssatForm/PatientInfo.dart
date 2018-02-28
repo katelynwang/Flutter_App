@@ -1,19 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../Material/MenuDrawer.dart';
 
 class PatientData {
-  String birthWeight = '';
-  String birthOrder = '';
+  String birthWeight = '';              //textformfield
+  String birthOrder = '';               //textformfield
   String gender = '';
-  String estGA = '';
+  String estGa = '';
   String growth = '';
-  String babyAdmittedFrom = '';
+  String admitted = '';
   String resuscitationAtBirth = '';
-  String indicationsForReferral = '';
-  String resuscitationMeds = '';
-  String otherMeds = '';
+  String referral = '';
+  String resuscitationMeds = '';        //textformfield
+  String otherMeds = '';                //textformfield
   String at1min = '';
   String at5min = '';
   String at10min = '';
@@ -31,55 +33,126 @@ class PatientInfo extends StatefulWidget {
 class PatientInfoState extends State<PatientInfo> {
   PatientData patient = new PatientData();
 
-  String _ddBirthOrder;
+//  String _ddBirthOrder;
   String _ddGender;
   String _ddEstGa;
   String _ddGrowth;
   String _ddAdmitted;
   String _ddResAtBirth;
-  String _ddIndicationReferral;
+  String _ddReferral;
   String _dd1Min;
   String _dd5Min;
   String _dd10Min;
   String _dd15Min;
   String _dd20Min;
 
-  final List<String> _birthOrder = <String>[
-    'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth'];
+//  final List<String> _birthOrder = <String>['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth'];
   final List<String> _gender = <String>['Female', 'Male'];
-  final List<String> _estGa = <String>[
-    'GA 1', 'GA 2', 'GA 3', 'GA 4', 'GA 5', 'GA 6',
-  ];
-  final List<String> _growth = <String>[
-    'Growth 1', 'Growth 2', 'Growth 3', 'Growth 4', 'Growth 5', 'Growth 6'];
+  final List<String> _estGa = <String>['GA 1', 'GA 2', 'GA 3', 'GA 4', 'GA 5', 'GA 6',];
+  final List<String> _growth = <String>['Growth 1', 'Growth 2', 'Growth 3', 'Growth 4', 'Growth 5', 'Growth 6'];
   final List<String> _admitted = <String>['Central', 'East', 'West', 'Other'];
   final List<String> _resAtBirth = <String>['True', 'False'];
-  final List<String> _indicationReferral = <String>[
-    'Referral 1',
-    'Referral 2',
-    'Referral 3',
-    'Referral 4',
-    'Referral 5',
-    'Referral 6'
-  ];
-  final List<String> _1Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _5Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _10Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _15Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _20Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'
-  ];
+  final List<String> _referral = <String>['Referral 1', 'Referral 2', 'Referral 3', 'Referral 4', 'Referral 5', 'Referral 6'];
+  final List<String> _1Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _5Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _10Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _15Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _20Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+
+  final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
+  bool _autoValidate = false;
+
+  String _validateBirthWeight(String value) {
+    final RegExp numExp = new RegExp(r'(?!^0*$)(?!^0*\.0*$)^\d{1,2}(\.\d{1,2})?$');
+
+    if (!numExp.hasMatch(value))
+      return 'Only 2 digits and 2 decimals at most';
+    return null;
+  }
+
+  String _validateBirthOrder(String value) {
+    final RegExp numExp = new RegExp(r'^[0-9]$');
+
+    if (!numExp.hasMatch(value))
+      return 'Only allow 1 digit';
+    return null;
+  }
+
+  void _handleSubmitted() {
+    final FormState form = _formKey.currentState;
+    form.save();
+
+    if (patient.birthWeight == '' || patient.birthOrder == '' || patient.gender == '' || patient.estGa == '' ||
+        patient.growth == '' || patient.admitted == '' || patient.resuscitationAtBirth == '' || patient.referral == '') {
+      showDialog(
+          context: context,
+          child: new AlertDialog(
+            content: new Text(
+                'Please complete all reqired fields! ..../${patient
+                    .birthWeight}..../${patient.birthOrder}....'),
+            actions: <Widget>[
+              new RaisedButton(
+                  child: new Text("OK"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  })
+            ],
+          )
+      );
+    } else if (!form.validate()){
+      _autoValidate = true; // Start validating on every change.
+      showDialog(
+          context: context,
+          child: new AlertDialog(
+            content: new Text('Illegal input!'),
+            actions: <Widget>[
+              new RaisedButton(
+                  child: new Text("OK"),
+                  onPressed: () {Navigator.of(context).pop(false);})
+            ],
+          )
+      );
+    } else{
+      form.save();
+      showDialog(
+          context: context,
+          child: new AlertDialog(
+            content: new Text("Are you sure to submit this patient's information?"),
+            actions: <Widget>[
+              new RaisedButton(
+                  child: new Text('Cancel'),
+                  onPressed: () {Navigator.of(context).pop(false);}
+              ),
+
+              new RaisedButton(
+                  child: new Text('Submit'),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        child: new AlertDialog(
+                          content: new Text('New patient added successfully!'),
+                          actions: <Widget>[
+                            new RaisedButton(
+                                child: new Text("OK"),
+                                onPressed: () {
+                                  Navigator.of(context).pop(true);
+                                  Navigator.of(context).pop(true);
+                                })
+                          ],
+                        )
+                    );
+                  }
+              )
+            ],
+          )
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      endDrawer: new Drawer(
-        child: new MenuDrawer(),
-      ),
+      endDrawer: new Drawer(child: new MenuDrawer(),),
 
       appBar: new AppBar(
         title: new Text(
@@ -89,399 +162,380 @@ class PatientInfoState extends State<PatientInfo> {
 
       body: new SafeArea(
         child: new Form(
-//          autovalidate: _autovalidate,    //TODO
-          child: new ListView(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 30.0, vertical: 10.0),
-            children: <Widget>[
-              // Birth weight
-              new TextFormField(
-                decoration: const InputDecoration(
-//                  icon: const Icon(Icons.person),
-//                  hintText: 'What do people call you?',
-                  labelText: 'Birth Weight *',
-                ),
-                keyboardType: TextInputType.number,
-                onSaved: (String value) {
-                  patient.birthWeight = value;
-                },
-//                validator: _validateNumber,  //TODO
-                // TextInputFormatters are applied in sequence.
-                inputFormatters: <TextInputFormatter>[
-                  WhitelistingTextInputFormatter.digitsOnly,
-                ],
-              ),
+          key: _formKey,
+          autovalidate: _autoValidate,
 
-              // Birth order
-              new Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  new Expanded(
-                    child: new TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Birth Order *',
-                      ),
-                      keyboardType: TextInputType.number,
-                      onSaved: (String value) {
-                        patient.birthOrder = value;
+          child: new ListView(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
+          children: <Widget>[
+            new Container(
+              child: new Text('Patient Information', style: Theme.of(context).textTheme.button),
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.only(bottom: 10.0),
+            ),
+
+            // Birth weight
+            new TextFormField(
+              initialValue: patient.birthWeight,
+              decoration: const InputDecoration(
+                labelText: 'Birth Weight *',
+                hintText: 'Please enter numbers',
+              ),
+              onSaved: (String value) {patient.birthWeight = value;},
+              validator: _validateBirthWeight,
+            ),
+
+            // Birth order
+            new TextFormField(
+              initialValue: patient.birthOrder,
+              decoration: const InputDecoration(
+                labelText: 'Birth Order *',
+                hintText: 'Please enter digits only',
+              ),
+              keyboardType: TextInputType.number,
+              onSaved: (String value) {patient.birthOrder = value;},
+              validator: _validateBirthOrder,
+              // TextInputFormatters are applied in sequence.
+              inputFormatters: <TextInputFormatter>[
+                WhitelistingTextInputFormatter.digitsOnly,
+              ],
+            ),
+
+            // Gender, est. GA
+            new Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddGender,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddGender = newValue;
+                          patient.gender = _ddGender;
+                        });
                       },
-                      inputFormatters: <TextInputFormatter>[
-                        WhitelistingTextInputFormatter.digitsOnly,
+                      items: _gender.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Gender *'),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 30.0,),
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddEstGa,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddEstGa = newValue;
+                          patient.estGa = _ddEstGa;
+                        });
+                      },
+                      items: _estGa.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Est. GA *'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            // Growth, baby admitted from
+            new Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddGrowth,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddGrowth = newValue;
+                          patient.growth = _ddGrowth;
+                        });
+                      },
+                      items: _growth.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Growth *'),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 30.0,),
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddAdmitted,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddAdmitted = newValue;
+                          patient.admitted = _ddAdmitted;
+                        });
+                      },
+                      items: _admitted.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Admitted *'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            // Resuscitation at birth, indications for referral
+            new Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddResAtBirth,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddResAtBirth = newValue;
+                          patient.resuscitationAtBirth = _ddResAtBirth;
+                        });
+                      },
+                      items: _resAtBirth.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Resuscitation *'),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 30.0,),
+                new Expanded(
+                  child: new Container(
+                    padding: new EdgeInsets.only(top: 10.0),
+                    child: new DropdownButton<String>(
+                      value: _ddReferral,
+                      onChanged: (String newValue) {
+                        setState(() {
+                          _ddReferral = newValue;
+                          patient.referral = _ddReferral;
+                        });
+                      },
+                      items: _referral.map((String value) {
+                        return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                        );
+                      }).toList(),
+                      hint: new Text('Referral *'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            // Resuscitation meds
+            new TextFormField(
+              initialValue: patient.resuscitationMeds,
+              decoration: const InputDecoration(
+                hintText: 'List of resuscitation medications',
+                helperText: 'Keep it short, this is just a demo',
+                labelText: 'Resuscitation Meds',
+              ),
+              onSaved: (String value){patient.resuscitationMeds = value;},
+              maxLines: 2,
+              keyboardType: TextInputType.multiline,
+            ),
+
+            // Other meds
+            new TextFormField(
+              initialValue: patient.otherMeds,
+              decoration: const InputDecoration(
+                hintText: 'List of other medication history',
+                helperText: 'Keep it short, this is just a demo',
+                labelText: 'Other Meds',
+              ),
+              onSaved: (String value){patient.otherMeds = value;},
+              maxLines: 2,
+              keyboardType: TextInputType.multiline,
+            ),
+
+            // Apgar
+            new Container(
+                padding: new EdgeInsets.symmetric(vertical: 50.0),
+                child: new Column(
+                  children: <Widget>[
+                    new Container(
+                      child: new Text('Apgar', style: Theme.of(context).textTheme.button),
+                      alignment: Alignment.centerLeft,
+                    ),
+                    new Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                            padding: new EdgeInsets.only(top: 10.0),
+                            child: new DropdownButton<String>(
+                              value: _dd1Min,
+                              onChanged: (String newValue) {
+                                setState(() {
+                                  _dd1Min = newValue;
+                                  patient.at1min = _dd1Min;
+                                });
+                              },
+                              items: _1Min.map((String value) {
+                                return new DropdownMenuItem<String>(
+                                  value: value,
+                                  child: new Text(value),
+                                );
+                              }).toList(),
+                              hint: new Text('At 1 min'),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 30.0,),
+                        new Expanded(
+                          child: new Container(
+                            padding: new EdgeInsets.only(top: 10.0),
+                            child: new DropdownButton<String>(
+                              value: _dd5Min,
+                              onChanged: (String newValue) {
+                                setState(() {
+                                  _dd5Min = newValue;
+                                  patient.at5min = _dd5Min;
+                                });
+                              },
+                              items: _5Min.map((String value) {
+                                return new DropdownMenuItem<String>(
+                                  value: value,
+                                  child: new Text(value),
+                                );
+                              }).toList(),
+                              hint: new Text('At 5 min'),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
-                  ),
-                  const SizedBox(width: 30.0,),
-                  new Expanded(
-                    child: new Container(
-                      child: new DropdownButton<String>(
-                        value: _ddBirthOrder,
-                        isDense: false,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddBirthOrder = newValue;
-                          });
-                        },
-                        items: _birthOrder.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            child: new Text(value),
-                            value: value,
-                          );
-                        }).toList(),
-                        hint: new Text('Birth Order *'),
-                      ),
-                      padding: new EdgeInsets.only(top: 20.0),
-                    ),
-                  ),
-                ],
-              ),
 
-              // Gender, est. GA
-              new Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddGender,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddGender = newValue;
-                          });
-                        },
-                        items: _gender.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Gender *'),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 30.0,),
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddEstGa,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddEstGa = newValue;
-                          });
-                        },
-                        items: _estGa.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Est. GA *'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-
-              // Growth, baby admitted from
-              new Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddGrowth,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddGrowth = newValue;
-                          });
-                        },
-                        items: _growth.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Growth *'),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 30.0,),
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddAdmitted,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddAdmitted = newValue;
-                          });
-                        },
-                        items: _admitted.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Admitted From *'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-              // Resuscitation at birth, indications for referral
-              new Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddResAtBirth,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddResAtBirth = newValue;
-                          });
-                        },
-                        items: _resAtBirth.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Resuscitation *'),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 30.0,),
-                  new Expanded(
-                    child: new Container(
-                      padding: new EdgeInsets.only(top: 10.0),
-                      child: new DropdownButton<String>(
-                        value: _ddIndicationReferral,
-                        onChanged: (String newValue) {
-                          setState(() {
-                            _ddIndicationReferral = newValue;
-                          });
-                        },
-                        items: _indicationReferral.map((String value) {
-                          return new DropdownMenuItem<String>(
-                            value: value,
-                            child: new Text(value),
-                          );
-                        }).toList(),
-                        hint: new Text('Referral *'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-              // Resuscitation meds
-              new TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'List of resuscitation medications',
-                  helperText: 'Keep it short, this is just a demo',
-                  labelText: 'Resuscitation Meds',
-                ),
-                maxLines: 2,
-              ),
-
-              // Other meds
-              new TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'List of other medication history',
-                  labelText: 'Other Meds',
-                ),
-                maxLines: 2,
-              ),
-
-              // Apgar
-              new Container(
-                  padding: new EdgeInsets.symmetric(vertical: 50.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Container(
-                        child: new Text('Apgar', style: Theme
-                            .of(context)
-                            .textTheme
-                            .button),
-                        alignment: Alignment.centerLeft,
-                      ),
-                      new Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
-                          new Expanded(
-                            child: new Container(
-                              padding: new EdgeInsets.only(top: 10.0),
-                              child: new DropdownButton<String>(
-                                value: _dd1Min,
-                                onChanged: (String newValue) {
-                                  setState(() {
-                                    _dd1Min = newValue;
-                                  });
-                                },
-                                items: _1Min.map((String value) {
-                                  return new DropdownMenuItem<String>(
-                                    value: value,
-                                    child: new Text(value),
-                                  );
-                                }).toList(),
-                                hint: new Text('At 1 min'),
-                              ),
+                    new Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                            padding: new EdgeInsets.only(top: 10.0),
+                            child: new DropdownButton<String>(
+                              value: _dd10Min,
+                              onChanged: (String newValue) {
+                                setState(() {
+                                  _dd10Min = newValue;
+                                  patient.at10min = _dd10Min;
+                                });
+                              },
+                              items: _10Min.map((String value) {
+                                return new DropdownMenuItem<String>(
+                                  value: value,
+                                  child: new Text(value),
+                                );
+                              }).toList(),
+                              hint: new Text('At 10 min'),
                             ),
                           ),
-                          const SizedBox(width: 30.0,),
-                          new Expanded(
-                            child: new Container(
-                              padding: new EdgeInsets.only(top: 10.0),
-                              child: new DropdownButton<String>(
-                                value: _dd5Min,
-                                onChanged: (String newValue) {
-                                  setState(() {
-                                    _dd5Min = newValue;
-                                  });
-                                },
-                                items: _5Min.map((String value) {
-                                  return new DropdownMenuItem<String>(
-                                    value: value,
-                                    child: new Text(value),
-                                  );
-                                }).toList(),
-                                hint: new Text('At 5 min'),
-                              ),
+                        ),
+                        const SizedBox(width: 30.0,),
+                        new Expanded(
+                          child: new Container(
+                            padding: new EdgeInsets.only(top: 10.0),
+                            child: new DropdownButton<String>(
+                              value: _dd15Min,
+                              onChanged: (String newValue) {
+                                setState(() {
+                                  _dd15Min = newValue;
+                                  patient.at15min = _dd15Min;
+                                });
+                              },
+                              items: _15Min.map((String value) {
+                                return new DropdownMenuItem<String>(
+                                  value: value,
+                                  child: new Text(value),
+                                );
+                              }).toList(),
+                              hint: new Text('At 15 min'),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
+                    ),
 
-                      new Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
-                          new Expanded(
-                            child: new Container(
-                              padding: new EdgeInsets.only(top: 10.0),
-                              child: new DropdownButton<String>(
-                                value: _dd10Min,
-                                onChanged: (String newValue) {
-                                  setState(() {
-                                    _dd10Min = newValue;
-                                  });
-                                },
-                                items: _10Min.map((String value) {
-                                  return new DropdownMenuItem<String>(
-                                    value: value,
-                                    child: new Text(value),
-                                  );
-                                }).toList(),
-                                hint: new Text('At 10 min'),
-                              ),
+                    new Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                            padding: new EdgeInsets.only(top: 10.0),
+                            child: new DropdownButton<String>(
+                              value: _dd20Min,
+                              onChanged: (String newValue) {
+                                setState(() {
+                                  _dd20Min = newValue;
+                                  patient.at20min = _dd20Min;
+                                });
+                              },
+                              items: _20Min.map((String value) {
+                                return new DropdownMenuItem<String>(
+                                  value: value,
+                                  child: new Text(value),
+                                );
+                              }).toList(),
+                              hint: new Text('At 20 min'),
                             ),
                           ),
-                          const SizedBox(width: 30.0,),
-                          new Expanded(
-                            child: new Container(
-                              padding: new EdgeInsets.only(top: 10.0),
-                              child: new DropdownButton<String>(
-                                value: _dd15Min,
-                                onChanged: (String newValue) {
-                                  setState(() {
-                                    _dd15Min = newValue;
-                                  });
-                                },
-                                items: _15Min.map((String value) {
-                                  return new DropdownMenuItem<String>(
-                                    value: value,
-                                    child: new Text(value),
-                                  );
-                                }).toList(),
-                                hint: new Text('At 15 min'),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(width: 170.0,),
+                      ],
+                    ),
 
-                      new Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
-                          new Expanded(
-                            child: new Container(
-                              padding: new EdgeInsets.only(top: 10.0),
-                              child: new DropdownButton<String>(
-                                value: _dd20Min,
-                                onChanged: (String newValue) {
-                                  setState(() {
-                                    _dd20Min = newValue;
-                                  });
-                                },
-                                items: _20Min.map((String value) {
-                                  return new DropdownMenuItem<String>(
-                                    value: value,
-                                    child: new Text(value),
-                                  );
-                                }).toList(),
-                                hint: new Text('At 20 min'),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 170.0,),
-                        ],
-                      ),
+                  ],
+                )
+            ),
 
-                    ],
-                  )
+            // Hint
+            new Container(child: new Text('* indicates required field', style: Theme.of(context).textTheme.caption),),
+
+            // Submit button
+            new Container(
+              padding: const EdgeInsets.all(50.0),
+              alignment: Alignment.center,
+              child: new RaisedButton(
+                child: const Text('Submit'),
+                onPressed: _handleSubmitted,
               ),
+            ),
 
-
-              // Hint
-              new Container(
-                child: new Text('* indicates required field', style: Theme
-                    .of(context)
-                    .textTheme
-                    .caption),
-              ),
-
-              // Submit button
-              new Container(
-                padding: const EdgeInsets.all(50.0),
-                alignment: Alignment.center,
-                child: new RaisedButton(
-                  child: const Text('SUBMIT'),
-//                  onPressed: _handleSubmitted,
-                  onPressed: null,
-                ),
-              ),
-
-            ],
-          ),
+          ],
+        ),
         ),
       ),
     );
   }
+
 }
 
 void main() =>
