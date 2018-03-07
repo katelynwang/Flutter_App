@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'CreateCarePlan.dart';
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'Customize Care Plan',
-      home: new CustomizeCarePlan(),
-      routes: <String, WidgetBuilder>{
-        '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
-      },
-    ));
+import '../Material/MenuDrawer.dart';
+
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'Customize Care Plan',
+//      home: new CustomizeCarePlan(),
+//      routes: <String, WidgetBuilder>{
+//        '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
+//      },
+//    ));
 
 class CustomizeCarePlan extends StatelessWidget {
   //TODO: cant go back after customized
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text('Customize Care Plan'),
       ),

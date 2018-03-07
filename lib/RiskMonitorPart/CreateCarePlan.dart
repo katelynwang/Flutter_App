@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'Create Care Plan',
-      home: new CreateCarePlan(),
-    ));
+import '../Material/MenuDrawer.dart';
+
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'Create Care Plan',
+//      home: new CreateCarePlan(),
+//    ));
 
 class CreateCarePlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text('Customize Care Plan'),
       ),

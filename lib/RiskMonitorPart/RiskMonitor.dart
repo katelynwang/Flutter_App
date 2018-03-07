@@ -3,18 +3,17 @@ import 'CarePlan.dart';
 
 import '../Material/MenuDrawer.dart';
 
-//void main() => runApp(new MaterialApp(
-//  title: 'Risk Monitor Page',
-//  home: new RiskMonitor(),
-//));
+void main() => runApp(new MaterialApp(
+  title: 'Risk Monitor Page',
+  home: new RiskMonitor(),
+));
 
 class RiskMonitor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        endDrawer: new Drawer(
-          child: new MenuDrawer(),
-        ),
+        endDrawer: new Drawer(child: new MenuDrawer(),),
+
         appBar: new AppBar(
           title: new Text(
               'Risk Monitor',
@@ -39,7 +38,7 @@ class RiskMonitor extends StatelessWidget {
                       new Container(
                         width: 180.0,
                         child: new Text('Hypoglycemia',
-                          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.8,),
+                          style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                       ),
                       new Container(
                         width: 150.0,
@@ -65,7 +64,7 @@ class RiskMonitor extends StatelessWidget {
                       new Container(
                         width: 180.0,
                         child: new Text('Hypothermia',
-                          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.8,),
+                          style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                       ),
                       new Container(
                         width: 150.0,
@@ -91,7 +90,7 @@ class RiskMonitor extends StatelessWidget {
                       new Container(
                         width: 180.0,
                         child: new Text('Pneumothorax',
-                            style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.8),
+                            style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                       ),
                       new Container(
                         width: 150.0,
@@ -112,7 +111,7 @@ class RiskMonitor extends StatelessWidget {
           child: new RaisedButton(
             // COLOR NOT SHOWING
               highlightColor: Colors.blueGrey,
-              onPressed: null,
+              onPressed: (){Navigator.push(context, new MaterialPageRoute(builder: (_) => new CarePlan()));},
               child: new Text(
                   'Care Plan',
                   style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.5)

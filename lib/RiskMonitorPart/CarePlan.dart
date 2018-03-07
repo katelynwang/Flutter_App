@@ -2,20 +2,23 @@ import 'package:flutter/material.dart';
 import 'CustomizeCarePlan.dart';
 import 'MyCarePlan.dart';
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'Care Plan Page',
-      home: new CarePlan(),
-      routes: <String, WidgetBuilder>{
-        '/CustomizeCarePlan': (BuildContext context) => new CustomizeCarePlan(),
-        '/MyCarePlan': (BuildContext context) => new MyCarePlan(),
-      },
-    ));
+import '../Material/MenuDrawer.dart';
+
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'Care Plan Page',
+//      home: new CarePlan(),
+//      routes: <String, WidgetBuilder>{
+//        '/CustomizeCarePlan': (BuildContext context) => new CustomizeCarePlan(),
+//        '/MyCarePlan': (BuildContext context) => new MyCarePlan(),
+//      },
+//    ));
 
 class CarePlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text(
           'Suggested Care Plan',
@@ -75,8 +78,7 @@ class CarePlan extends StatelessWidget {
                           children: <Widget>[
                             new RaisedButton(
                               onPressed: () {
-                                Navigator.of(context).pushNamed(
-                                    '/CustomizeCarePlan');
+                                Navigator.push(context, new MaterialPageRoute(builder: (_) => new CustomizeCarePlan()));
                               },
                               child: new Text('Customize My Plan',
                                 style: new TextStyle(color: Colors.black),),
@@ -87,7 +89,7 @@ class CarePlan extends StatelessWidget {
                           children: <Widget>[
                             new RaisedButton(
                               onPressed: () {
-                                Navigator.of(context).pushNamed('/MyCarePlan');
+                                Navigator.push(context, new MaterialPageRoute(builder: (_) => new MyCarePlan()));
                               },
                               child: new Text('Proceed >>',
                                 style: new TextStyle(color: Colors.black),),
