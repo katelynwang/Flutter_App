@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'MenuPage.dart';
+import 'LogIn.dart';
 import 'CurrentStatePart/CurrentState.dart';
 import 'RiskMonitorPart/RiskMonitor.dart';
 import 'ActivityMonitorPart/ActivityMonitor.dart';
@@ -23,19 +23,21 @@ import 'PssatForm/TimeB.dart';
 import 'PssatForm/TimeC.dart';
 import 'PssatForm/Interventions.dart';
 import 'PssatForm/SelfEvaluation.dart';
-import 'SupportToolPart/SelectModule.dart';
+import 'SupportToolPart/SelectOptions.dart';
 import 'SupportToolPart/Sugar.dart';
 
 void main() {
   runApp(
     new MaterialApp(
       title: 'Menu Page',
-      home: new MenuPage(),
-      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0))),
-//      home: new LogIn(),
+      home: new LogIn(),
+      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0, color: Colors.black))),
       routes: <String, WidgetBuilder>{
         //home page is automatically defiend as:
         //"/": (BuildContext context) => new MenuPage(),
+        "/LogIn": (_) => new LogIn(),
+        "/LogOut": (_) => new LogOut(),
+
         "/CurrentState": (BuildContext context) => new CurrentState(),
 
         "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
@@ -64,20 +66,31 @@ void main() {
         "/PssatForm/Interventions": (BuildContext context) => new Interventions(),
         "/PssatForm/SelfEvaluation": (BuildContext context) => new SelfEvaluation(),
 
-        "/Stable": (BuildContext context) => new SelectModule(),
+        "/Stable": (BuildContext context) => new SelectOptions(),
         "/Stable/Sugar": (BuildContext context) => new Sugar(),
       }
     )
   );
 }
 
-class LogIn extends StatelessWidget {   //TODO: a new login page before home page
+class LogOut extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+//    Decoration rowDeco = new Decoration();
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Options', textAlign: TextAlign.left, style: new TextStyle(color: Colors.white)),
-    ),
+        appBar: new AppBar(
+//        leading: new IconButton(
+//          icon: new Icon(Icons.arrow_drop_down_circle, size: 42.0, color: Colors.white,),
+//          onPressed: null),
+          title: new Text(
+            'Log Out',
+            style: Theme
+                .of(context)
+                .textTheme
+                .display1
+                .copyWith(color: Colors.white), textScaleFactor: 0.6,
+          ),
+        ),
 
       body: new Container(
         //TODO: add icon

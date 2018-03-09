@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Activity Monitor Page',
-  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-  theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0),),)
-));
+//void main() => runApp(new MaterialApp(
+//  title: 'Activity Monitor Page',
+//  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+//  theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0),),)
+//));
 
 class ActivityMonitor extends StatelessWidget {
   @override
@@ -50,7 +50,6 @@ List<Choice> choices = <Choice>[
     'Previous',
     new Container(
       height: 450.0,
-      width: 350.0,
       decoration: const BoxDecoration(
           border: const Border(
             top: const BorderSide(width: 1.0, color: Colors.black),
@@ -61,25 +60,150 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
+          new Row(
+            children: <Widget>[
+              new Expanded(child: new Container(
+                height: 55.0,
+                padding: const EdgeInsets.all(16.0),
+                decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.black),
+                    )
+                ),
+                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+              ),)
+            ],
+          ),
+
           new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
             decoration: const BoxDecoration(
-                color: Colors.grey,
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 55.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text(
+                              '12:32 a.m:   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 55.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text(
+                              '12:20 a.m   Hypoglycemia confirmed', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 55.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:12 a.m   Symptoms visible', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 55.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:10 a.m   Bedside Evaluation', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
                 border: const Border(
                   bottom: const BorderSide(width: 1.0, color: Colors.black),
                 )
             ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
-          ),
-
-          new Container(
-            decoration: const BoxDecoration(
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                )
-            ),
             child: new FlatButton(
                 onPressed: null,
                 child: new Row(
@@ -90,129 +214,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:32 a.m:   IV Treatment Started',)
-                        )
-                    ),
-
-                    new Container(
-                      width: 50.0,
-                      alignment: Alignment.centerRight,
-                      child: new Icon(
-                          Icons.arrow_forward_ios, color: Colors.black),
-                    )
-                  ],
-                )
-            ),
-          ),
-
-          new Container(
-            decoration: const BoxDecoration(
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                )
-            ),
-            child: new FlatButton(
-                onPressed: null,
-                child: new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Container(
-                            height: 55.0,
-                            padding: const EdgeInsets.all(8.0),
-                            alignment: Alignment.centerLeft,
-                            child: new Text(
-                              '12:20 a.m   Hypoglycemia confirmed',)
-                        )
-                    ),
-
-                    new Container(
-                      width: 50.0,
-                      alignment: Alignment.centerRight,
-                      child: new Icon(
-                          Icons.arrow_forward_ios, color: Colors.black),
-                    )
-                  ],
-                )
-            ),
-          ),
-
-          new Container(
-            decoration: const BoxDecoration(
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                )
-            ),
-            child: new FlatButton(
-                onPressed: null,
-                child: new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Container(
-                            height: 55.0,
-                            padding: const EdgeInsets.all(8.0),
-                            alignment: Alignment.centerLeft,
-                            child: new Text('12:12 a.m   Symptoms visible',)
-                        )
-                    ),
-
-                    new Container(
-                      width: 50.0,
-                      alignment: Alignment.centerRight,
-                      child: new Icon(
-                          Icons.arrow_forward_ios, color: Colors.black),
-                    )
-                  ],
-                )
-            ),
-          ),
-
-          new Container(
-            decoration: const BoxDecoration(
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                )
-            ),
-            child: new FlatButton(
-                onPressed: null,
-                child: new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Container(
-                            height: 55.0,
-                            padding: const EdgeInsets.all(8.0),
-                            alignment: Alignment.centerLeft,
-                            child: new Text('12:10 a.m   Bedside Evaluation',)
-                        )
-                    ),
-
-                    new Container(
-                      width: 50.0,
-                      alignment: Alignment.centerRight,
-                      child: new Icon(
-                          Icons.arrow_forward_ios, color: Colors.black),
-                    )
-                  ],
-                )
-            ),
-          ),
-
-          new Container(
-            decoration: const BoxDecoration(
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new FlatButton(
-                onPressed: null,
-                child: new Row(
-                  children: <Widget>[
-                    new Expanded(
-                        child: new Container(
-                            height: 55.0,
-                            padding: const EdgeInsets.all(8.0),
-                            alignment: Alignment.centerLeft,
-                            child: new Text(
-                              '12:01 a.m:  Potential Risk - Hypoglycemia',)
+                              '12:01 a.m:  Potential Risk - Hypoglycemia', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -247,17 +249,22 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
-          new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
-            decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  height: 55.0,
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.black),
+                    )
+                  ),
+                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                ),
+              )
+            ],
           ),
 
           new Container(
@@ -276,7 +283,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:45 a.m:   Administer Glucose Level',)
+                              '12:45 a.m:   Administer Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -306,7 +313,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:30 a.m   IV Treatment Started',)
+                            child: new Text('12:30 a.m   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -337,7 +344,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:22 a.m   Waiting for Serum Glucose',)
+                              '12:22 a.m   Waiting for Serum Glucose', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -372,17 +379,22 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
-          new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
-            decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  height: 55.0,
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: const Border(
+                        bottom: const BorderSide(width: 1.0, color: Colors.black),
+                      )
+                  ),
+                  child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                ),
+              )
+            ],
           ),
 
           new Container(
@@ -401,7 +413,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:05 a.m:  Evaluate Pneumothorax',)
+                              '01:05 a.m:  Evaluate Pneumothorax', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -432,7 +444,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:30 a.m   Evaluate Glucose Level',)
+                              '01:30 a.m   Evaluate Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
