@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
-import 'SelectModule.dart';
+import '../Demo/MyListView.dart';
 
-void main() => runApp(
-  new MaterialApp(
-    title: 'Select Options',
-    home: new SelectOptions(),
-  ),
-);
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
+
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Select Options',
+//    home: new SelectOptions(),
+//  ),
+//);
 
 class SelectOptions extends StatefulWidget {
   @override
@@ -20,17 +22,24 @@ class SelectOptionState extends State<SelectOptions> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Select Options'),
+        title: new Text(
+            'Select Options', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
         child: new MyListView(
           options: [
-            new Option(new Icon(Icons.account_circle), 'Manage Patients',context, null),
+            new Option(
+                new Icon(Icons.account_circle), 'Manage Patients', context,
+                new MaterialPageRoute(builder: (_) => new Blank())),
             new Option(new Icon(Icons.tag_faces), 'STABLE', context, new MaterialPageRoute(builder: (_) => new SelectModule())),
-            new Option(new Icon(Icons.add_alert), 'Manage Alerts', context, null),
-            new Option(new Icon(Icons.note), 'Manage Notes', context, null),
-            new Option(new Icon(Icons.help), 'FAQ', context, null), // TO BE IMPLEMENTED
+            new Option(new Icon(Icons.add_alert), 'Manage Alerts', context,
+                new MaterialPageRoute(builder: (_) => new Blank())),
+            new Option(new Icon(Icons.note), 'Manage Notes', context,
+                new MaterialPageRoute(builder: (_) => new Blank())),
+            new Option(new Icon(Icons.help), 'FAQ', context,
+                new MaterialPageRoute(
+                    builder: (_) => new Blank())), // TO BE IMPLEMENTED
           ],
         ),
       ),

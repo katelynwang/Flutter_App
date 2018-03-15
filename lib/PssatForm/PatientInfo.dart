@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
 
 class PatientData {
   String birthWeight = ''; //textformfield
@@ -87,8 +88,14 @@ class PatientInfoState extends State<PatientInfo> {
   Widget build(BuildContext context) {
     return new Scaffold(
       key: _scaffoldKey,
-
       endDrawer: new Drawer(child: new MenuDrawer(),),
+//      drawer: new MenuDrawer(
+//        useLightTheme: widget.useLightTheme,
+//        onThemeChanged: widget.onThemeChanged,
+//        textScaleFactor: widget.textScaleFactor,
+//        onTextScaleFactorChanged: widget.onTextScaleFactorChanged,
+//      ),
+
       appBar: new AppBar(
         title: new Text(
             "Patient Information",
@@ -106,10 +113,13 @@ class PatientInfoState extends State<PatientInfo> {
 
             children: <Widget>[
               new TextFormField(
+                style: new TextStyle(color: Colors.black),
 //              initialValue: patient.birthWeight,
                 decoration: const InputDecoration(
-                  labelText: 'Birth Weight *',
-                  helperText: 'Please enter numbers',
+                    labelText: 'Birth Weight *',
+                    helperText: 'Please enter numbers',
+                    fillColor: Colors.black,
+                    isDense: true
                 ),
                 keyboardType: TextInputType.number,
                 onSaved: (String value) {patient.birthWeight = value;},
@@ -117,6 +127,7 @@ class PatientInfoState extends State<PatientInfo> {
               ),
 
               new TextFormField(
+                style: new TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
                   labelText: 'Birth Order *',
                   helperText: 'Please enter 1 digit only',
@@ -278,6 +289,7 @@ class PatientInfoState extends State<PatientInfo> {
               ),
 
               new TextFormField(
+                style: new TextStyle(color: Colors.black),
                 initialValue: patient.resuscitationMeds,
                 decoration: const InputDecoration(
                   hintText: 'List of resuscitation medications',
@@ -292,6 +304,7 @@ class PatientInfoState extends State<PatientInfo> {
               ),
 
               new TextFormField(
+                style: new TextStyle(color: Colors.black),
                 initialValue: patient.otherMeds,
                 decoration: const InputDecoration(
                   hintText: 'List of other medication history',

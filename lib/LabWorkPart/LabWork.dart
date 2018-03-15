@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
-
-import 'ViewRecTest.dart';
-import 'OrderAdditionalTests.dart';
-import 'EnterPatientReports.dart';
-import 'ViewPatientReports.dart';
-import 'ViewRecMedication.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -23,7 +18,8 @@ class LabWork extends StatelessWidget {
         child: new MenuDrawer(),
       ),
       appBar: new AppBar(
-        title: new Text("Lab Work", style: new TextStyle(color: Colors.black),
+        title: new Text("Lab Work", textScaleFactor: globals.textScaleFactor,
+            style: new TextStyle(color: Colors.black),
             textAlign: TextAlign.left),
       ),
 
@@ -37,6 +33,7 @@ class LabWork extends StatelessWidget {
                     height: 50.0,
                     child: new RaisedButton(
                         child: new Text("View Recommended Test",
+                            textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/All");}
@@ -56,6 +53,7 @@ class LabWork extends StatelessWidget {
                     height: 50.0,
                     child: new RaisedButton(
                         child: new Text("Order Additional Tests",
+                            textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
@@ -75,6 +73,7 @@ class LabWork extends StatelessWidget {
                     height: 50.0,
                     child: new RaisedButton(
                         child: new Text("Enter Patient Reports",
+                            textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
@@ -94,6 +93,7 @@ class LabWork extends StatelessWidget {
                     height: 50.0,
                     child: new RaisedButton(
                         child: new Text("View Patient Reports",
+                            textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
@@ -113,6 +113,7 @@ class LabWork extends StatelessWidget {
                     height: 50.0,
                     child: new RaisedButton(
                         child: new Text("View Recommended Medications",
+                            textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}

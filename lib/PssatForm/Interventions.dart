@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 class InterventionData {
   String et = '';
@@ -77,13 +78,16 @@ class InterventionsState extends State<Interventions>{
               padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
               children: <Widget>[
                 new Container(
-                  child: new Text('Airway', style: _titleStyle),
+                  child: new Text(
+                      'Airway', textScaleFactor: globals.textScaleFactor,
+                      style: _titleStyle),
                   padding: const EdgeInsets.only(top: 30.0, bottom: 5.0),
                   decoration: _myDeco,
                   alignment: Alignment.centerLeft,
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   initialValue: intervention.et,
                   decoration: const InputDecoration(
                     labelText: 'ET tube location when team arrived *',
@@ -103,7 +107,8 @@ class InterventionsState extends State<Interventions>{
                   children: <Widget>[
                     new Container(
                         padding: _rowPadding,
-                        child: new Text('ET tube readjusted')
+                        child: new Text('ET readjusted',
+                            textScaleFactor: globals.textScaleFactor)
                     ),
                     new SizedBox(width: 37.0),
                     new Container(
@@ -112,7 +117,8 @@ class InterventionsState extends State<Interventions>{
                           children: <Widget>[
                             new Row(
                               children: <Widget>[
-                                new Container(child: new Text('Yes'),),
+                                new Container(child: new Text('Yes',
+                                    textScaleFactor: globals.textScaleFactor),),
                                 new Radio<String>(
                                   value: 'Yes',
                                   groupValue: intervention.isEt,
@@ -123,7 +129,8 @@ class InterventionsState extends State<Interventions>{
                             new SizedBox(width: 10.0),
                             new Row(
                               children: <Widget>[
-                                new Container(child: new Text('No'),),
+                                new Container(child: new Text('No',
+                                    textScaleFactor: globals.textScaleFactor),),
                                 new Radio<String>(
                                   value: 'No',
                                   groupValue: intervention.isEt,
@@ -138,15 +145,18 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new Container(
-                  child: new Text('Antibiotics', style: _titleStyle),
+                  child: new Text(
+                      'Antibiotics', textScaleFactor: globals.textScaleFactor,
+                      style: _titleStyle),
                   padding: _titlePadding,
                   decoration: _myDeco,
                   alignment: Alignment.centerLeft,
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
-                    labelText: 'Antibiotics order time'
+                      labelText: 'Antibiotics order time'
                   ),
                   keyboardType: TextInputType.number,
                   onSaved: (String val) {
@@ -162,7 +172,8 @@ class InterventionsState extends State<Interventions>{
                   children: <Widget>[
                     new Container(
                         padding: _rowPadding,
-                        child: new Text('Order Mode')
+                        child: new Text('Order Mode',
+                            textScaleFactor: globals.textScaleFactor)
                     ),
                     new SizedBox(width: 65.0),
                     new Expanded(
@@ -180,13 +191,14 @@ class InterventionsState extends State<Interventions>{
                               child: new Text(val),
                             );
                           }).toList(),
-                         hint: new Text('                                ', style: new TextStyle(height: 4.0),),
+//                         hint: new Text('                                ', style: new TextStyle(height: 4.0),),
                         ),
                     ),
                   ],
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       labelText: 'Blood culture obtained time'
                   ),
@@ -201,6 +213,7 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       labelText: 'Antibiotics began time'
                   ),
@@ -216,7 +229,8 @@ class InterventionsState extends State<Interventions>{
 
                 new Container(
                   padding: new EdgeInsets.only(top: 30.0),
-                  child: new Text('* indicates required field', style: Theme
+                  child: new Text('* indicates required field',
+                      textScaleFactor: globals.textScaleFactor, style: Theme
                       .of(context)
                       .textTheme
                       .caption),),
@@ -225,7 +239,8 @@ class InterventionsState extends State<Interventions>{
                   padding: const EdgeInsets.only(top: 50.0),
                   alignment: Alignment.center,
                   child: new RaisedButton(
-                    child: const Text('Submit'),
+                    child: new Text(
+                        'Submit', textScaleFactor: globals.textScaleFactor),
                     onPressed: _handleSubmitted,
                   ),
                 ),
@@ -249,7 +264,8 @@ class InterventionsState extends State<Interventions>{
       _autoValidate = true;
 
       final redSnackbar = new SnackBar(
-        content: new Text('Please re-enter field that marked in red'),);
+        content: new Text('Please re-enter field that marked in red',
+            textScaleFactor: globals.textScaleFactor),);
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
     } else {
       form.save();
@@ -258,25 +274,31 @@ class InterventionsState extends State<Interventions>{
           context: context,
           child: new AlertDialog(
             content: new Text(
-                "Are you sure to submit this?"),
+                "Are you sure to submit this?",
+                textScaleFactor: globals.textScaleFactor),
             actions: <Widget>[
               new RaisedButton(
-                  child: new Text('Cancel'),
+                  child: new Text(
+                      'Cancel', textScaleFactor: globals.textScaleFactor),
                   onPressed: () {
                     Navigator.of(context).pop(false);
                   }
               ),
 
               new RaisedButton(
-                  child: new Text('Submit'),
+                  child: new Text(
+                      'Submit', textScaleFactor: globals.textScaleFactor),
                   onPressed: () {
                     showDialog(
                         context: context,
                         child: new AlertDialog(
-                          content: new Text('Time A form submitted successfully!'),
+                          content: new Text(
+                              'Time A form submitted successfully!',
+                              textScaleFactor: globals.textScaleFactor),
                           actions: <Widget>[
                             new RaisedButton(
-                                child: new Text("OK"),
+                                child: new Text("OK",
+                                    textScaleFactor: globals.textScaleFactor),
                                 onPressed: () {
                                   Navigator.of(context).pop(true);
                                   Navigator.of(context).pop(true);
