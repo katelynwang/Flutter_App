@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Material/globals.dart' as globals;
 
-import 'MenuPage.dart';
-import 'TileMenu.dart';
+import 'Material/all.dart';
 
 class User {
   String userName = '';
@@ -45,56 +44,57 @@ class LogInInfoState extends State<LogIn> {
     return new WillPopScope(
         onWillPop: () async => false,
         child: new Scaffold(
+            drawer: new Drawer(child: new ToolDrawer(),),
             appBar: new AppBar(
               title: new Text(
                   'Log In', textScaleFactor: globals.textScaleFactor,
                   textAlign: TextAlign.left,
                   style: new TextStyle(color: Colors.white)),
-            automaticallyImplyLeading: false,   //works same as WillPopScope, which stops user from going back to previous routes
-          ),
-
-          body: new SafeArea(
-            child: new Form(
-              key: _formKey,
-              autovalidate: _autoValidate,
-
-              child: new ListView(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-
-                  children: <Widget>[
-                    new TextFormField(
-                      initialValue: user.userName,
-                      decoration: new InputDecoration(
-                          labelText: 'User Name',
-                          isDense: true
-                      ),
-                      keyboardType: TextInputType.text,
-                      validator: validateUserName,
-                      onSaved: (String value) {user.userName = value;},
-                      style: new TextStyle(color: Colors.black),
-                    ),
-
-                    new TextFormField(
-                      initialValue: '',
-                      obscureText: true,
-                      decoration: const InputDecoration(labelText: 'Password',),
-                      keyboardType: TextInputType.text,
-                      validator: validatePassword,
-                      onSaved: (String value) {user.password = value;},
-                      style: new TextStyle(color: Colors.black),
-                    ),
-
-                    new Container(
-                      child: new RaisedButton(
-                        child: new Text(
-                            'Log In', textScaleFactor: globals.textScaleFactor),
-                          onPressed: _handleSubmit,
-                      ),
-                    )
-                  ]
-              ),
+              automaticallyImplyLeading: false,   //works same as WillPopScope, which stops user from going back to previous routes
             ),
-          )
+
+            body: new SafeArea(
+              child: new Form(
+                key: _formKey,
+                autovalidate: _autoValidate,
+
+                child: new ListView(
+                    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+
+                    children: <Widget>[
+                      new TextFormField(
+                        initialValue: user.userName,
+                        decoration: new InputDecoration(
+                            labelText: 'User Name',
+                            isDense: true
+                        ),
+                        keyboardType: TextInputType.text,
+                        validator: validateUserName,
+                        onSaved: (String value) {user.userName = value;},
+                        style: new TextStyle(color: Colors.black),
+                      ),
+
+                      new TextFormField(
+                        initialValue: '',
+                        obscureText: true,
+                        decoration: const InputDecoration(labelText: 'Password',),
+                        keyboardType: TextInputType.text,
+                        validator: validatePassword,
+                        onSaved: (String value) {user.password = value;},
+                        style: new TextStyle(color: Colors.black),
+                      ),
+
+                      new Container(
+                        child: new RaisedButton(
+                          child: new Text(
+                              'Log In', textScaleFactor: globals.textScaleFactor),
+                          onPressed: _handleSubmit,
+                        ),
+                      )
+                    ]
+                ),
+              ),
+            )
       ),
     );
   }
@@ -131,7 +131,14 @@ class LogInInfoState extends State<LogIn> {
 //                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
                       Navigator.push(context, new MaterialPageRoute(
                           builder: (_) => new MyHomePage()));
-                    })
+                    },
+
+                  // No back button
+//                    onPressed: () {
+//                      Navigator.pushReplacement(context, new MaterialPageRoute(
+//                          builder: (_) => new MyHomePage()));
+//                    },
+                )
               ],
             )
         );

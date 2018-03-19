@@ -101,7 +101,6 @@ class MenuDrawerState extends State<MenuDrawer> {
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, "/LogIn");
                       },
-                      //TODO: Go back to login page (main.dart) if log out
                       child: new Text(
                           ' Log Out', textScaleFactor: globals.textScaleFactor,
                           style: new TextStyle(

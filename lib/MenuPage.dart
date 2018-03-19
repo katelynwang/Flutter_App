@@ -13,14 +13,11 @@ class MenuPage extends StatelessWidget {
         ),
 
         appBar: new AppBar(
-//        leading: new IconButton(
-//          icon: new Icon(Icons.menu),
-//          tooltip: 'Navigation menu',
-//          onPressed: null
-//        ),
+          automaticallyImplyLeading: false,
           title: new Text('Options', textScaleFactor: globals.textScaleFactor,
               textAlign: TextAlign.left,
-              style: new TextStyle(color: Colors.white)),
+              style: new TextStyle(color: Colors.white)
+          ),
         ),
 
         // body is the majority of the screen.
