@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24fd619-85a6-4692-8fe3-6827d04bc373" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Material/tool_drawer.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/app.flx" afterPath="$PROJECT_DIR$/build/app.flx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/snapshot_blob.bin" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/snapshot_blob.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.swiftmodule/x86_64.swiftmodule" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.swiftmodule/x86_64.swiftmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/snapshot_blob.bin" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/snapshot_blob.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/snapshot_blob.bin" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.packages" afterPath="$PROJECT_DIR$/.packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/flutter_assets/LICENSE" afterPath="$PROJECT_DIR$/build/flutter_assets/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/LICENSE" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/flutter_assets/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/LICENSE" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/flutter_assets/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/LogIn.dart" afterPath="$PROJECT_DIR$/lib/LogIn.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" afterPath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/MenuPage.dart" afterPath="$PROJECT_DIR$/lib/MenuPage.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -366,7 +339,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492455442" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492492770" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -414,7 +387,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492455442" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492492770" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -759,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521139605107</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Stucture and layout changes">
+      <created>1521492489941</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1521492489941</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -807,7 +787,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="add .iml" />
     <MESSAGE value="add risk history navigator and new menu" />
@@ -827,8 +806,8 @@
     <MESSAGE value="Add validator for checkbox in ViewRecTest and OrderAdditionalTests" />
     <MESSAGE value="Add patient information page" />
     <MESSAGE value="Add text scale for all pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add text scale for all pages" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Stucture and layout changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stucture and layout changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
