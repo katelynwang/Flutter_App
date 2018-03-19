@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'AddAlert.dart';
-import 'SeeDetails.dart';
+import 'add_alert.dart';
+import 'see_details.dart';
 
 import '../Material/globals.dart' as globals;
 

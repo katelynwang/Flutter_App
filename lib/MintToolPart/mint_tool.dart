@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Results.dart';
+import 'results.dart';
 
 import '../Material/globals.dart' as globals;
 
@@ -42,7 +42,7 @@ class MintToolState extends State<MintTool> {
                         padding: new EdgeInsets.all(30.0),
                         child: new Column(
                           children: <Widget>[
-                            new pH(),
+                            new PH(),
                             new Age(),
                             new Apgar(),
                             new BirthWeight(),
@@ -82,12 +82,12 @@ class MintToolState extends State<MintTool> {
   }
 }
 
-class pH extends StatefulWidget {
+class PH extends StatefulWidget {
   @override
-  pHState createState() => new pHState();
+  PHState createState() => new PHState();
 }
 
-class pHState extends State<pH> {
+class PHState extends State<PH> {
   static const List<String> pHs = const[
     '5.0',
     '6.0',

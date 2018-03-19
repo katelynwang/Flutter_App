@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MintTool.dart';
+import 'mint_tool.dart';
 
 import '../Material/globals.dart' as globals;
 

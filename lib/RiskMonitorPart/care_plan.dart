@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'CustomizeCarePlan.dart';
-import 'MyCarePlan.dart';
+import 'customize_care_plan.dart';
+import 'my_care_plan.dart';
 
 import '../Material/all.dart';
 import '../Material/globals.dart' as globals;

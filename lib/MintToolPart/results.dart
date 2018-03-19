@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Material/Zoomable_image.dart';
+import '../Material/zoomable_image.dart';
 
 import '../Material/globals.dart' as globals;
 

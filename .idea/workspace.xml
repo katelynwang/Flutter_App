@@ -2,7 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24fd619-85a6-4692-8fe3-6827d04bc373" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Material/globals.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/ActivityMonitorPart/ActivityMonitor.dart" afterPath="$PROJECT_DIR$/lib/ActivityMonitorPart/activity_monitor.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/CurrentStatePart/CurrentState.dart" afterPath="$PROJECT_DIR$/lib/CurrentStatePart/current_state.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/CBCReport.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/cbc_report.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/EnterPatientReports.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/enter_patient_reports.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/LabWork.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/lab_work.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ManroeChart.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/manroe_chart.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/OrderAdditionalTests.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/order_additional_tests.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/TestTube.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/test_tube.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewPatientReports.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/view_patient_reports.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecMedication.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/view_rec_medication.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LabWorkPart/ViewRecTest.dart" afterPath="$PROJECT_DIR$/lib/LabWorkPart/view_rec_test.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/LogIn.dart" afterPath="$PROJECT_DIR$/lib/log_in.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/ManageAlertsPart/AddAlert.dart" afterPath="$PROJECT_DIR$/lib/ManageAlertsPart/add_alert.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/ManageAlertsPart/AlertsDashboard.dart" afterPath="$PROJECT_DIR$/lib/ManageAlertsPart/alerts_dashboard.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/ManageAlertsPart/SeeDetails.dart" afterPath="$PROJECT_DIR$/lib/ManageAlertsPart/see_details.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/Material/Menu.dart" afterPath="$PROJECT_DIR$/lib/Material/menu.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/Material/MenuDrawer.dart" afterPath="$PROJECT_DIR$/lib/Material/menu_drawer.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/Material/Zoomable_image.dart" afterPath="$PROJECT_DIR$/lib/Material/zoomable_image.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/MenuPage.dart" afterPath="$PROJECT_DIR$/lib/menu_page.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/MintToolPart/Introduction.dart" afterPath="$PROJECT_DIR$/lib/MintToolPart/introduction.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/MintToolPart/MintTool.dart" afterPath="$PROJECT_DIR$/lib/MintToolPart/mint_tool.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/MintToolPart/Results.dart" afterPath="$PROJECT_DIR$/lib/MintToolPart/results.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/Interventions.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/interventions.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/PatientInfo.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/patient_info.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/PssatFormDir.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/pssat_form_dir.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/PssatFormMenu.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/pssat_form_menu.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/SelfEvaluation.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/self_evaluation.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/TimeA.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/time_a.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/TimeB.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/time_b.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/PssatForm/TimeC.dart" afterPath="$PROJECT_DIR$/lib/PssatForm/time_c.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/risk_history.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_All.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/risk_history_all.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypoglycemia.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/risk_history_hypoglycemia.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypothermia.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/risk_history_hypothermia.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Pneumothorax.dart" afterPath="$PROJECT_DIR$/lib/RiskHistoryPart/risk_history_pneumothorax.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/CarePlan.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/care_plan.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/CreateCarePlan.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/create_care_plan.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/CustomizeCarePlan.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/customize_care_plan.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/MyCarePlan.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/my_care_plan.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/RiskMonitorPart/RiskMonitor.dart" afterPath="$PROJECT_DIR$/lib/RiskMonitorPart/risk_monitor.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/CalculateBolus.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/calculate_bolus.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/Calculations.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/calculations.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/ClassifyInfants.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/classify_infants.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/HeparinSafety.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/heparin_safety.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/HourlyFluidRate.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/hourly_fluid_rate.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/Interpreters.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/interpreters.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/QuickCards.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/quick_cards.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/QuickSlides.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/quick_slides.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/Risks.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/risks.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/SelectCalculators.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/select_calculators.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/SelectConverter.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/select_converter.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/SelectModule.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/select_module.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/SelectOptions.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/select_options.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/Sugar.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/sugar.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/TemperatureConverter.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/temperature_converter.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/TreatmentGuideline.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/treatment_guideline.dart" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/SupportToolPart/WeightConverter.dart" afterPath="$PROJECT_DIR$/lib/SupportToolPart/weight_converter.dart" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/app.flx" afterPath="$PROJECT_DIR$/build/app.flx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/widget_test.dart" afterPath="$PROJECT_DIR$/test/widget_test.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +78,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LogIn.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/LogIn.dart">
+      <file leaf-file-name="globals.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Material/globals.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,10 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypothermia.dart" />
-        <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory_Hypoglycemia.dart" />
-        <option value="$PROJECT_DIR$/lib/Demo/pesto_demo.dart" />
-        <option value="$PROJECT_DIR$/lib/test.dart" />
         <option value="$PROJECT_DIR$/lib/RiskHistoryPart/RiskHistory.dart" />
         <option value="$PROJECT_DIR$/lib/LabWorkPart/ViewRecMedication.dart" />
         <option value="$PROJECT_DIR$/lib/Material/CheckboxList.dart" />
@@ -127,8 +181,12 @@
         <option value="$PROJECT_DIR$/lib/MenuPage.dart" />
         <option value="$PROJECT_DIR$/lib/Material/tool_drawer.dart" />
         <option value="$PROJECT_DIR$/lib/TileMenu.dart" />
-        <option value="$PROJECT_DIR$/lib/Material/all.dart" />
         <option value="$PROJECT_DIR$/lib/LogIn.dart" />
+        <option value="$PROJECT_DIR$/lib/ManageAlertsPart/add_alert.dart" />
+        <option value="$PROJECT_DIR$/lib/MintToolPart/mint_tool.dart" />
+        <option value="$PROJECT_DIR$/lib/Material/all.dart" />
+        <option value="$PROJECT_DIR$/lib/LabWorkPart/cbc_report.dart" />
+        <option value="$PROJECT_DIR$/lib/Material/globals.dart" />
       </list>
     </option>
   </component>
@@ -210,7 +268,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="SupportToolPart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RiskMonitorPart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PssatForm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MintToolPart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Material" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Flutter_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LabWorkPart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,24 +400,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
-    <configuration default="false" name="CurrentState.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/CurrentStatePart/CurrentState.dart" />
+    <configuration default="false" name="current_state.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/CurrentStatePart/current_state.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="OrderAdditionalTests.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/LabWorkPart/OrderAdditionalTests.dart" />
+    <configuration default="false" name="order_additional_tests.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/LabWorkPart/order_additional_tests.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="MintTool.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/MintToolPart/MintTool.dart" />
+    <configuration default="false" name="mint_tool.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/MintToolPart/mint_tool.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="Results.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/MintToolPart/Results.dart" />
+    <configuration default="false" name="results.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/MintToolPart/results.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="PatientInfo.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/PssatForm/PatientInfo.dart" />
+    <configuration default="false" name="patient_info.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/PssatForm/patient_info.dart" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -339,7 +487,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492492770" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521493662331" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -387,7 +535,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521492492770" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521493662331" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -545,32 +693,32 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/Material/DropDownList.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="Menu.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/Material/Menu.dart" />
+    <configuration default="false" name="menu.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/Material/menu.dart" />
       <method />
     </configuration>
-    <configuration default="false" name="ViewRecTest.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/LabWorkPart/ViewRecTest.dart" />
+    <configuration default="false" name="view_rec_test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/LabWorkPart/view_rec_test.dart" />
       <method />
     </configuration>
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Flutter.main.dart" />
       <item index="1" class="java.lang.String" itemvalue="Flutter.DropDownList.dart" />
-      <item index="2" class="java.lang.String" itemvalue="Flutter.Menu.dart" />
-      <item index="3" class="java.lang.String" itemvalue="Flutter.ViewRecTest.dart" />
-      <item index="4" class="java.lang.String" itemvalue="Flutter.CurrentState.dart" />
-      <item index="5" class="java.lang.String" itemvalue="Flutter.OrderAdditionalTests.dart" />
-      <item index="6" class="java.lang.String" itemvalue="Flutter.MintTool.dart" />
-      <item index="7" class="java.lang.String" itemvalue="Flutter.Results.dart" />
-      <item index="8" class="java.lang.String" itemvalue="Flutter.PatientInfo.dart" />
+      <item index="2" class="java.lang.String" itemvalue="Flutter.menu.dart" />
+      <item index="3" class="java.lang.String" itemvalue="Flutter.view_rec_test.dart" />
+      <item index="4" class="java.lang.String" itemvalue="Flutter.current_state.dart" />
+      <item index="5" class="java.lang.String" itemvalue="Flutter.order_additional_tests.dart" />
+      <item index="6" class="java.lang.String" itemvalue="Flutter.mint_tool.dart" />
+      <item index="7" class="java.lang.String" itemvalue="Flutter.results.dart" />
+      <item index="8" class="java.lang.String" itemvalue="Flutter.patient_info.dart" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Flutter.PatientInfo.dart" />
-        <item index="1" class="java.lang.String" itemvalue="Flutter.CurrentState.dart" />
-        <item index="2" class="java.lang.String" itemvalue="Flutter.MintTool.dart" />
-        <item index="3" class="java.lang.String" itemvalue="Flutter.Results.dart" />
-        <item index="4" class="java.lang.String" itemvalue="Flutter.OrderAdditionalTests.dart" />
+        <item index="0" class="java.lang.String" itemvalue="Flutter.patient_info.dart" />
+        <item index="1" class="java.lang.String" itemvalue="Flutter.current_state.dart" />
+        <item index="2" class="java.lang.String" itemvalue="Flutter.mint_tool.dart" />
+        <item index="3" class="java.lang.String" itemvalue="Flutter.results.dart" />
+        <item index="4" class="java.lang.String" itemvalue="Flutter.order_additional_tests.dart" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -739,7 +887,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521492489941</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Stucture and layout changes">
+      <created>1521492497161</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1521492497161</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -761,13 +916,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25409836" sideWeight="0.513465" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25409836" sideWeight="0.486535" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25409836" sideWeight="0.486535" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22008032" sideWeight="0.49531615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -780,7 +936,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -811,57 +966,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/MintToolPart/results.dart</url>
+          <line>90</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/CBCReport.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ManageAlertsPart/AddAlert.dart">
+    <entry file="file://$PROJECT_DIR$/lib/ManageAlertsPart/see_details.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ManageAlertsPart/AlertsDashboard.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ManageAlertsPart/SeeDetails.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/MintTool.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/Results.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="115" column="11" lean-forward="true" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/Introduction.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -872,14 +992,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/MyCarePlan.dart">
+    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/my_care_plan.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/CustomizeCarePlan.dart">
+    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/customize_care_plan.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -893,21 +1013,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/RiskMonitor.dart">
+    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/risk_monitor.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/CarePlan.dart">
+    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/care_plan.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/CreateCarePlan.dart">
+    <entry file="file://$PROJECT_DIR$/lib/RiskMonitorPart/create_care_plan.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1665">
           <caret line="115" column="45" lean-forward="false" selection-start-line="115" selection-start-column="45" selection-end-line="115" selection-end-column="45" />
@@ -921,14 +1041,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/ViewRecTest.dart">
+    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/view_rec_test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/ViewRecMedication.dart">
+    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/view_rec_medication.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
@@ -963,14 +1083,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/PssatForm/PatientInfo.dart">
+    <entry file="file://$PROJECT_DIR$/lib/PssatForm/patient_info.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/ViewPatientReports.dart">
+    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/view_patient_reports.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
@@ -984,42 +1104,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CurrentStatePart/CurrentState.dart">
+    <entry file="file://$PROJECT_DIR$/lib/CurrentStatePart/current_state.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/HourlyFluidRate.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/hourly_fluid_rate.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/Interpreters.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/interpreters.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/QuickCards.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/quick_slides.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/QuickSlides.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/Risks.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/risks.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
@@ -1029,7 +1142,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/SelectCalculators.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/select_calculators.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
@@ -1037,7 +1150,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/SelectConverter.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/select_converter.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
@@ -1045,7 +1158,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/SelectModule.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/select_module.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1055,7 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/SelectOptions.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/select_options.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
@@ -1065,7 +1178,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/Sugar.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/sugar.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
@@ -1083,7 +1196,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/TemperatureConverter.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/temperature_converter.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
@@ -1093,20 +1206,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/WeightConverter.dart">
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/weight_converter.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/TreatmentGuideline.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1163,15 +1266,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Material/all.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Material/MenuDrawer.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Material/menu_drawer.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
@@ -1191,7 +1286,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MenuPage.dart">
+    <entry file="file://$PROJECT_DIR$/lib/menu_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -1201,7 +1296,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/TileMenu.dart">
+    <entry file="file://$PROJECT_DIR$/lib/tile_menu.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
@@ -1211,13 +1306,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/LogIn.dart">
+    <entry file="file://$PROJECT_DIR$/lib/ManageAlertsPart/add_alert.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/log_in.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/mint_tool.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="372" column="37" lean-forward="true" selection-start-line="372" selection-start-column="37" selection-end-line="372" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/results.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MintToolPart/introduction.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/quick_cards.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Material/all.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/SupportToolPart/treatment_guideline.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/LabWorkPart/cbc_report.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Material/globals.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
