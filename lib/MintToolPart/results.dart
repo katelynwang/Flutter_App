@@ -3,11 +3,11 @@ import '../Material/zoomable_image.dart';
 
 import '../Material/globals.dart' as globals;
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'Results Dashboard',
-      home: new Result(),
-    ));
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'Results Dashboard',
+//      home: new Result(),
+//    ));
 
 var assetImage = new AssetImage('images/result.png');
 var resultImage = new ZoomableImage(assetImage, scale: 16.0, backgroundColor: Colors.grey,);

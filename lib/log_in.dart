@@ -44,16 +44,17 @@ class LogInInfoState extends State<LogIn> {
     return new WillPopScope(
         onWillPop: () async => false,
         child: new Scaffold(
-            drawer: new Drawer(child: new ToolDrawer(),),
+            drawer: new Drawer(child: new ToolDrawer()),
             appBar: new AppBar(
               title: new Text(
-                  'Log In', textScaleFactor: globals.textScaleFactor,
+                  'Welcome', textScaleFactor: globals.textScaleFactor,
                   textAlign: TextAlign.left,
                   style: new TextStyle(color: Colors.white)),
               automaticallyImplyLeading: false,   //works same as WillPopScope, which stops user from going back to previous routes
             ),
 
             body: new SafeArea(
+              minimum: new EdgeInsets.only(top: 100.0, left: 30.0, right: 30.0),
               child: new Form(
                 key: _formKey,
                 autovalidate: _autoValidate,
@@ -84,10 +85,13 @@ class LogInInfoState extends State<LogIn> {
                         style: new TextStyle(color: Colors.black),
                       ),
 
+                      new SizedBox(height: 20.0),
+
                       new Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                        alignment: Alignment.center,
                         child: new RaisedButton(
-                          child: new Text(
-                              'Log In', textScaleFactor: globals.textScaleFactor),
+                          child: new Text('Log In', textScaleFactor: globals.textScaleFactor),
                           onPressed: _handleSubmit,
                         ),
                       )
@@ -111,8 +115,13 @@ class LogInInfoState extends State<LogIn> {
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
     } else {
       form.save();
-      if ((user.userName == 'Test' || user.userName == 'test') &&
-          user.password == '1') {
+
+      //(?i)test
+      //\btest\b
+
+      final RegExp nameExp = new RegExp(r'\btest\b');
+
+      if (!nameExp.hasMatch(user.userName) && user.password == '1') {
         showDialog(
             context: context,
             child: new AlertDialog(
@@ -130,7 +139,8 @@ class LogInInfoState extends State<LogIn> {
                       Navigator.of(context).pop(true);
 //                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
                       Navigator.push(context, new MaterialPageRoute(
-                          builder: (_) => new MyHomePage()));
+                          builder: (_) => new MyHomePage()));   // tile menu
+//                          builder: (_) => new MenuPage()));  // normal menu
                     },
 
                   // No back button
